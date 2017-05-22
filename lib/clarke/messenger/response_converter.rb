@@ -20,6 +20,8 @@ module Clarke
             response_to_attachment(response, 'file', response.file)
           elsif response.text
             response_to_text_message(response)
+          elsif response.options[:typings]
+            response_to_typings(response)
           end
         end
 
@@ -51,6 +53,9 @@ module Clarke
           Responses::TextMessage.new(response.recipient, response.text, response.options)
         end
 
+        def response_to_typings(response)
+          Responses::ActionTypings.new(response.recipient, response.options[:typings])
+        end
       end
     end
   end

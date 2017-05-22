@@ -17,6 +17,7 @@ require 'clarke/messenger/responses/button_template'
 require 'clarke/messenger/responses/generic_template'
 require 'clarke/messenger/responses/quick_replies_template'
 require 'clarke/messenger/responses/text_message'
+require 'clarke/messenger/responses/action_typings'
 
 # Ressources
 require 'clarke/messenger/interface'

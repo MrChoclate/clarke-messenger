@@ -7,8 +7,10 @@ module Clarke
       class << self
 
         attr_accessor :facebook_page_token
-
+        attr_accessor :delay_between_requests
       end
+
+      @delay_between_requests = 0
 
     end
   end

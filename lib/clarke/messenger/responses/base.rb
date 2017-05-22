@@ -11,6 +11,10 @@ module Clarke
           raise NotImplementedError, 'get_request_body'
         end
 
+        def recipient
+          @recipient_id
+        end
+
         protected
         def request_body_initializer
           {
