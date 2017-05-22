@@ -9,7 +9,7 @@ module Clarke
 
         def get_request_body
           request_body = request_body_initializer()
-          request_body[:sender_cation] = 'typing_on' if @typings_bool else 'typing_off'
+          request_body[:sender_action] = @typings_bool ? 'typing_on' : 'typing_off'
           request_body.to_json
         end
       end

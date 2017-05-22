@@ -20,7 +20,7 @@ module Clarke
             response_to_attachment(response, 'file', response.file)
           elsif response.text
             response_to_text_message(response)
-          elsif response.options[:typings]
+          elsif response.options.has_key?(:typings)
             response_to_typings(response)
           end
         end
